@@ -90,24 +90,24 @@ elif page == 'Prediction':
 
        outlet_type = st.selectbox('Outlet Type', ['Supermarket Type1', 'Supermarket Type2', 'Supermarket Type3', 'Grocery Store'])
 
-if st.button('Predict'):
+       if st.button('Predict'):
 
-       data = pd.DataFrame({
-        'Item_Weight': [item_weight],
-        'Item_Fat_Content': [item_fat_content],
-        'Item_Visibility': [item_visibility],
-        'Item_Type': [item_type],
-        'Item_MRP': [item_mrp],
-        'Outlet_Identifier': [outlet_identifier],
-        'Outlet_Establishment_Year': [outlet_year],
-        'Outlet_Size': [outlet_size],
-        'Outlet_Location_Type': [outlet_location],
-        'Outlet_Type': [outlet_type],
-        'Quantity': [quantity]
-         })
+              data = pd.DataFrame({
+              'Item_Weight': [item_weight],
+              'Item_Fat_Content': [item_fat_content],
+              'Item_Visibility': [item_visibility],
+              'Item_Type': [item_type],
+              'Item_MRP': [item_mrp],
+              'Outlet_Identifier': [outlet_identifier],
+              'Outlet_Establishment_Year': [outlet_year],
+              'Outlet_Size': [outlet_size],
+              'Outlet_Location_Type': [outlet_location],
+              'Outlet_Type': [outlet_type],
+              'Quantity': [quantity]
+              })
 
-       prediction = loaded_model.predict(data)
+              prediction = loaded_model.predict(data)
 
 
-       st.success(f'Predicted Sales: {prediction[0]:,.2f}')
+              st.success(f'Predicted Sales: {prediction[0]:,.2f}')
        st.write(data)
