@@ -11,7 +11,7 @@ Use the sidebar to navigate between:
 - Data Analysis
 - Prediction''')
 page = st.sidebar.selectbox('Select Page', ['Data Analysis', 'Prediction'])
-df = pd.read_csv('D:/Data/Final_Project/model_big_mart.csv')
+df = pd.read_csv('model_big_mart.csv')
 if page == 'Data Analysis':
        st.title('Data Analysis')
        st.header('Dataset Describtion')
