@@ -110,4 +110,4 @@ elif page == 'Prediction':
 
 
               st.success(f'Predicted Sales: {prediction[0]:,.2f}')
-       st.write(data)
+              st.write(data)
